@@ -168,7 +168,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
+					"raw": "theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
 					"host": [
 						"{{live}}theluxurycloset",
 						"com"
