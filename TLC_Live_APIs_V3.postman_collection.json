@@ -1,0 +1,2280 @@
+{
+	"info": {
+		"_postman_id": "9e1695c8-6c33-4362-b124-5e7d3775477a",
+		"name": "TLC Live APIs V3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"console.log(jsonData&&jsonData.data&&jsonData.data[\"access-token\"]);\r",
+							"pm.environment.set(\"access-token\", jsonData.data[\"access-token\"]);\r",
+							"console.log('Login v3',pm.response.responseTime );\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"automation@theluxurycloset.com\",\"password\":\"Welcome123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/login?",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"login"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products SPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"251850"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "countryCode",
+							"value": "IN"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products MPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products?initial_params=search%3Dbags&search=bags&is_seo=1&countryCode=IN&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products"
+					],
+					"query": [
+						{
+							"key": "initial_params",
+							"value": "search%3Dbags"
+						},
+						{
+							"key": "search",
+							"value": "bags"
+						},
+						{
+							"key": "is_seo",
+							"value": "1"
+						},
+						{
+							"key": "countryCode",
+							"value": "IN"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criterias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/search/criterias?language=en&collection_slug=ladylike&initial_params=collection_slug%3Dladylike",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"search",
+						"criterias"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						},
+						{
+							"key": "collection_slug",
+							"value": "ladylike"
+						},
+						{
+							"key": "initial_params",
+							"value": "collection_slug%3Dladylike"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48ef0aa5-8a9d-452d-a040-24aca075154b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Profile v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8b6cb649-e3bb-4aed-be93-8ecb36277e11",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}"
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/{{userid}}/profile?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"{{userid}}",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "test_auth",
+							"disabled": true
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WIshlist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a812fbb2-9ef1-4d7e-8c1d-490023183600",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Wishlist v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/my-wishlist?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"{{userid}}",
+						"my-wishlist"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Items",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "551b2916-9fb7-4e4d-a602-a5c249c47147",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Items v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/new-my-items?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"{{userid}}",
+						"new-my-items"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "711e38ab-86f6-4040-bb8c-4937636520b0",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"console.log('Cart v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"product_id\":207019,\"installments\":0,\"quantity\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/carts?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"carts"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Purchases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Purchases v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/my-accounts/805656/new-my-purchases?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"805656",
+						"new-my-purchases"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HamBurger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('HamBurger v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/menus?platform=M&type=hamburger&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"menus"
+					],
+					"query": [
+						{
+							"key": "platform",
+							"value": "M"
+						},
+						{
+							"key": "type",
+							"value": "hamburger"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Personal Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Update Personal Info v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/{{userid}}/update-personal-info?access-token={{access-token}}&first_name=Gaurav&gender=male&last_name=Tyagi",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"{{userid}}",
+						"update-personal-info"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "first_name",
+							"value": "Gaurav"
+						},
+						{
+							"key": "gender",
+							"value": "male"
+						},
+						{
+							"key": "last_name",
+							"value": "Tyagi"
+						},
+						{
+							"key": "platform",
+							"value": "mobile_web",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('SPP v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/{{product}}?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"{{product}}"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Expected Time Range",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Expected Time Range v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/get-expected-time-range?product_ids=32752&country_id=99&access-token={{access-token}}&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"get-expected-time-range"
+					],
+					"query": [
+						{
+							"key": "product_ids",
+							"value": "32752"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Products v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products?initial_params=search%3Dugu&search=ugu&is_seo=1&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products"
+					],
+					"query": [
+						{
+							"key": "initial_params",
+							"value": "search%3Dugu"
+						},
+						{
+							"key": "search",
+							"value": "ugu"
+						},
+						{
+							"key": "is_seo",
+							"value": "1"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipping Payment Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Shipping Payment Info v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/get-shipping-payment-info?product_id=56&country_id=99&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"get-shipping-payment-info"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "56"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Validation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Product Validation v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products-validation?access-token={{access-token}}&product_ids=56368&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products-validation"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "56368"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Voucher",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Voucher v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/checkouts/805656/voucher?access-token={{access-token}}&code=test252543&country_id=99&product_ids=56368&sub_total=232&total_amount=232&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"805656",
+						"voucher"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "code",
+							"value": "test252543"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "product_ids",
+							"value": "56368"
+						},
+						{
+							"key": "sub_total",
+							"value": "232"
+						},
+						{
+							"key": "total_amount",
+							"value": "232"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Payment Method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/checkouts/valid-payment-methods?access-token={{access-token}}&product_ids=232713&delivery_method=delivery&country_id=99&IP_user_country=IN",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"valid-payment-methods"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "232713"
+						},
+						{
+							"key": "delivery_method",
+							"value": "delivery"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "IP_user_country",
+							"value": "IN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipping",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d3e5faf6-ef3f-4c79-b828-9eedc93a39db",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Shipping v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/checkouts/shipping?access-token={{access-token}}&product_ids=20&country_id=99&payment_method=cash_on_delivery&delivery_method=delivery",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"shipping"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "20"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "payment_method",
+							"value": "cash_on_delivery"
+						},
+						{
+							"key": "delivery_method",
+							"value": "delivery"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Countries v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/countries?type=all&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "all"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Currencies v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/currencies-list?type=all&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"currencies-list"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "all"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Optout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Optout v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/optout?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"optout"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Optin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Optin v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/optin?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"optin"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Criteria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Search Criteria v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/search/criterias?Search%20Results=1&access-token={{access-token}}&category_level_two_ids=42%2C42&search=Men",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"search",
+						"criterias"
+					],
+					"query": [
+						{
+							"key": "Search%20Results",
+							"value": "1"
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "category_level_two_ids",
+							"value": "42%2C42"
+						},
+						{
+							"key": "search",
+							"value": "Men"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proposals Upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "551b2916-9fb7-4e4d-a602-a5c249c47147",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Proposals Upload v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"file_name\":\"5ddbb1462205b.jpg\",\"code\":201}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/proposals/upload?access-token={{access-token}}&file_name=ksdk.jpg",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"proposals",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "file_name",
+							"value": "ksdk.jpg"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Forgot Password v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"current_password\":\"Welcome123\",\"new_password\":\"Welcome123\",\"repeat_password\":\"Welcome123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/805656/password?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"805656",
+						"password"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						},
+						{
+							"key": "Platform",
+							"value": "desktop",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"OrderBilling\":{\"firstname\":\"ddg                              \",\"lastname\":\"gfg\",\"country_id\":99,\"address\":\"wduwudsuhkdsks\",\"state_province\":\"uwdhuwdu\",\"city\":\"wudwu\",\"postcode\":\"yyyuyy\",\"email\":\"gaurav.t@theluxurycloset.com\",\"dial_code\":\"+91\",\"phone\":\"7838061776\",\"different_delivery\":0},\"data\":{\"Product\":{\"id\":[\"207019\"]},\"total_amount\":396.67,\"currency\":\"INR\",\"delivery_method\":\"delivery\",\"payment_method\":\"bank_transfer\",\"tax\":0,\"country_code\":\"IN\",\"duty_amount\":0,\"vat\":0}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/checkouts/place-order?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"place-order"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"OrderBilling\":{\"firstname\":\"ddg                              \",\"lastname\":\"gfg\",\"country_id\":99,\"address\":\"wduwudsuhkdsks\",\"state_province\":\"uwdhuwdu\",\"city\":\"wudwu\",\"postcode\":\"yyyuyy\",\"email\":\"gaurav.t@theluxurycloset.com\",\"dial_code\":\"+91\",\"phone\":\"7838061776\",\"different_delivery\":0},\"data\":{\"Product\":{\"id\":[\"207019\"]},\"total_amount\":396.67,\"currency\":\"INR\",\"delivery_method\":\"delivery\",\"payment_method\":\"bank_transfer\",\"tax\":0,\"country_code\":\"IN\",\"duty_amount\":0,\"vat\":0,\"tmp_order_id\":18450,\"transaction_id\":2083}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/checkouts/create?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"create"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refundable Amount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Search Criteria v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/order-product/refundable-amount/undefined?access-token={{access-token}}&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"order-product",
+						"refundable-amount",
+						"undefined"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Item",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"reason\":\"Need to change Payment method/details\",\"payment_id\":2720}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/order-product/return-item?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"order-product",
+						"return-item"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Vat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vat_registered\":1,\"country_id\":225,\"name\":\"test\",\"address\":\"test\",\"trn\":\"test\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/458552/register-vat?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"458552",
+						"register-vat"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Phone otp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phone\":\"9355581579\",\"dial-code\":\"+91\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/change-phone-otp?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"change-phone-otp"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paypal Payment verification",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"payment_method\":\"Paypal\",\"paypal_id\":\"gauravtmca@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/794939/payment-detail?access-token={{access-token}}",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"794939",
+						"payment-detail"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "06d2bb9a-e55f-431e-b124-98ce9a7c4fd8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "99d9d036-7a45-484d-9164-35ba6cdd3c7c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
