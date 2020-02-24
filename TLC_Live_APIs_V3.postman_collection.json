@@ -114,7 +114,7 @@
 						"id": "742afc7f-6227-4a92-98b3-35317793581b",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(400);\r",
 							"});\r",
 							""
 						],
@@ -168,7 +168,7 @@
 					}
 				},
 				"url": {
-					"raw": "theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
 					"host": [
 						"{{live}}theluxurycloset",
 						"com"
