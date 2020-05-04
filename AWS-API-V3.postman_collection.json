@@ -1727,7 +1727,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"current_password\":\"Welcome123\",\"new_password\":\"Welcome123\",\"repeat_password\":\"Welcome123\"}",
+					"raw": "{\"current_password\":\"Welcome@123\",\"new_password\":\"Welcome@123\",\"repeat_password\":\"Welcome@123\"}",
 					"options": {
 						"raw": {
 							"language": "json"
