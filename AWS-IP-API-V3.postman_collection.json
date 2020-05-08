@@ -1,0 +1,2247 @@
+{
+	"info": {
+		"_postman_id": "226d7e81-ae3d-4727-9960-f5af2c8af55f",
+		"name": "TLC Live APIs V3 Copy Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5730dc79-d371-4557-aefe-8cc63bdbf80b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"console.log(jsonData&&jsonData.data&&jsonData.data[\"access-token\"]);\r",
+							"pm.environment.set(\"access-token\", jsonData.data[\"access-token\"]);\r",
+							"console.log('Login v3',pm.response.responseTime );\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "934ca31d-c8a6-45a5-9a4a-6f348f05b796",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"awsweb@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/login",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"login"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products SPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3ce0bd92-ee47-495b-bc1f-d43a4b3dd012",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ad760525-ce4a-4b55-b3e2-69e309a224d2",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products/251850?access-token={{access-token}}&countryCode=IN&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"251850"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "countryCode",
+							"value": "IN"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products MPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ebbab875-e8d8-417d-a902-213b7b8664af",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "362f4cac-e7c8-4183-90f6-a725b4010d4d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products?initial_params=search%3Dbags&search=bags&is_seo=1&countryCode=IN&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products"
+					],
+					"query": [
+						{
+							"key": "initial_params",
+							"value": "search%3Dbags"
+						},
+						{
+							"key": "search",
+							"value": "bags"
+						},
+						{
+							"key": "is_seo",
+							"value": "1"
+						},
+						{
+							"key": "countryCode",
+							"value": "IN"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criterias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac26f11f-fcb0-429d-91ec-41f9c75bd9e2",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8dc96ede-ebc1-48b9-8948-c23159e6b0ee",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/search/criterias?language=en&collection_slug=ladylike&initial_params=collection_slug%3Dladylike",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"search",
+						"criterias"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						},
+						{
+							"key": "collection_slug",
+							"value": "ladylike"
+						},
+						{
+							"key": "initial_params",
+							"value": "collection_slug%3Dladylike"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "076d3d7f-fcae-463a-bcf5-b808ef4f655f",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Profile v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d0ef3bdc-814f-47e5-acd1-4620fd4a96ac",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"gaurav.t@theluxurycloset.com\",\"password\":\"Welcome@123\"}"
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/{{userid}}/profile?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"{{userid}}",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "test_auth",
+							"disabled": true
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WIshlist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "522ed846-5158-461c-b842-fa82f65a7c8b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Wishlist v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/my-wishlist?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"{{userid}}",
+						"my-wishlist"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Items",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a55e8d54-bd72-4ef1-a154-29e21ec56747",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Items v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/new-my-items?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"{{userid}}",
+						"new-my-items"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab8cd588-d2c2-438c-b2c7-24a192b608e9",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"console.log('Cart v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"product_id\":249223,\"installments\":0,\"quantity\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/carts?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"carts"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Purchases",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ccac5cd9-9f4f-4941-a624-47b90041d751",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('My Purchases v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/my-accounts/805656/new-my-purchases?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"my-accounts",
+						"805656",
+						"new-my-purchases"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HamBurger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f13b924e-2102-463f-baf7-95fc9e8cd73a",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('HamBurger v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/menus?platform=M&type=hamburger&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"menus"
+					],
+					"query": [
+						{
+							"key": "platform",
+							"value": "M"
+						},
+						{
+							"key": "type",
+							"value": "hamburger"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Personal Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e54ec9f9-58ff-49a0-9978-d851610da3af",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Update Personal Info v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/{{userid}}/update-personal-info?access-token={{access-token}}&first_name=Gaurav&gender=male&last_name=Tyagi",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"{{userid}}",
+						"update-personal-info"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "first_name",
+							"value": "Gaurav"
+						},
+						{
+							"key": "gender",
+							"value": "male"
+						},
+						{
+							"key": "last_name",
+							"value": "Tyagi"
+						},
+						{
+							"key": "platform",
+							"value": "mobile_web",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27f679e9-8e8d-47f5-ab77-f8a06a05abbc",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('SPP v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products/{{product}}?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"{{product}}"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Expected Time Range",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e4b855cf-f681-41fe-8068-27ae659dfc70",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Expected Time Range v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products/get-expected-time-range?product_ids=32752&country_id=99&access-token={{access-token}}&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"get-expected-time-range"
+					],
+					"query": [
+						{
+							"key": "product_ids",
+							"value": "32752"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "67928494-5560-4bc4-9f01-1d4ba54e20e3",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Products v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products?initial_params=search%3Dugu&search=ugu&is_seo=1&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products"
+					],
+					"query": [
+						{
+							"key": "initial_params",
+							"value": "search%3Dugu"
+						},
+						{
+							"key": "search",
+							"value": "ugu"
+						},
+						{
+							"key": "is_seo",
+							"value": "1"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipping Payment Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dac5190f-3164-4393-9485-e7f073fc27bd",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Shipping Payment Info v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products/get-shipping-payment-info?product_id=56&country_id=99&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products",
+						"get-shipping-payment-info"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "56"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product Validation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8832eebc-4644-4dd4-84e3-7813355ba7ca",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Product Validation v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/products-validation?access-token={{access-token}}&product_ids=56368&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"products-validation"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "56368"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Voucher",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "10935839-b056-4761-a95b-a4ffd185b8a1",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Voucher v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/checkouts/805656/voucher?access-token={{access-token}}&code=test252543&country_id=99&product_ids=56368&sub_total=232&total_amount=232&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"805656",
+						"voucher"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "code",
+							"value": "test252543"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "product_ids",
+							"value": "56368"
+						},
+						{
+							"key": "sub_total",
+							"value": "232"
+						},
+						{
+							"key": "total_amount",
+							"value": "232"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Valid Payment Method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8032b03-9c70-48c9-b1df-2581d7787f96",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/checkouts/valid-payment-methods?access-token={{access-token}}&product_ids=232713&delivery_method=delivery&country_id=99&IP_user_country=IN",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"valid-payment-methods"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "232713"
+						},
+						{
+							"key": "delivery_method",
+							"value": "delivery"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "IP_user_country",
+							"value": "IN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipping",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0245358c-f3c8-46f7-a980-672c0c6ac39b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Shipping v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/checkouts/shipping?access-token={{access-token}}&product_ids=20&country_id=99&payment_method=cash_on_delivery&delivery_method=delivery",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"shipping"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "product_ids",
+							"value": "20"
+						},
+						{
+							"key": "country_id",
+							"value": "99"
+						},
+						{
+							"key": "payment_method",
+							"value": "cash_on_delivery"
+						},
+						{
+							"key": "delivery_method",
+							"value": "delivery"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Countries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a8fe9cd8-8e11-4923-b4c6-d1809ead8138",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Countries v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/countries?type=all&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "all"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currencies",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "058ebf43-16c5-4e63-9c3b-649060ac4a5e",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Currencies v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/currencies-list?type=all&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"currencies-list"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "all"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Optout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "897c57e3-eba0-48b7-a8bf-f7546cfa4137",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Optout v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/optout?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"optout"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Optin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "209e0690-579f-4287-94dd-f357770725c8",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Optin v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/optin?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"optin"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Criteria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9e9bf6c-3bcf-4613-9ea1-9a55cf9d04b2",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Search Criteria v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/search/criterias?Search%20Results=1&access-token={{access-token}}&category_level_two_ids=42%2C42&search=Men",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"search",
+						"criterias"
+					],
+					"query": [
+						{
+							"key": "Search%20Results",
+							"value": "1"
+						},
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "category_level_two_ids",
+							"value": "42%2C42"
+						},
+						{
+							"key": "search",
+							"value": "Men"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Proposals Upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f1ad083-9906-45a4-b60a-7b93d8f08a11",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Proposals Upload v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"file_name\":\"5ddbb1462205b.jpg\",\"code\":201}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/proposals/upload?access-token={{access-token}}&file_name=ksdk.jpg",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"proposals",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "file_name",
+							"value": "ksdk.jpg"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "85cc50f4-2a1a-4111-a6b0-0faadfea7c72",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Forgot Password v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7df5f297-7fbe-435f-a4ef-e4655c47a6e0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"current_password\":\"Welcome@123\",\"new_password\":\"Welcome@123\",\"repeat_password\":\"Welcome@123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/805656/password?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"805656",
+						"password"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						},
+						{
+							"key": "Platform",
+							"value": "desktop",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bf81ad88-2f5f-48aa-89a1-79df0e59aa9b",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"OrderBilling\":{\"firstname\":\"ddg                              \",\"lastname\":\"gfg\",\"country_id\":99,\"address\":\"wduwudsuhkdsks\",\"state_province\":\"uwdhuwdu\",\"city\":\"wudwu\",\"postcode\":\"yyyuyy\",\"email\":\"gaurav.t@theluxurycloset.com\",\"dial_code\":\"+91\",\"phone\":\"7838061776\",\"different_delivery\":0},\"data\":{\"Product\":{\"id\":[\"249223\"]},\"total_amount\":396.67,\"currency\":\"INR\",\"delivery_method\":\"delivery\",\"payment_method\":\"bank_transfer\",\"tax\":0,\"country_code\":\"IN\",\"duty_amount\":0,\"vat\":0}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/checkouts/place-order?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"place-order"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4d2e478-5730-4651-ae71-2e3ac553197f",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"OrderBilling\":{\"firstname\":\"ddg                              \",\"lastname\":\"gfg\",\"country_id\":99,\"address\":\"wduwudsuhkdsks\",\"state_province\":\"uwdhuwdu\",\"city\":\"wudwu\",\"postcode\":\"yyyuyy\",\"email\":\"gaurav.t@theluxurycloset.com\",\"dial_code\":\"+91\",\"phone\":\"7838061776\",\"different_delivery\":0},\"data\":{\"Product\":{\"id\":[\"249223\"]},\"total_amount\":396.67,\"currency\":\"INR\",\"delivery_method\":\"delivery\",\"payment_method\":\"bank_transfer\",\"tax\":0,\"country_code\":\"IN\",\"duty_amount\":0,\"vat\":0,\"tmp_order_id\":18450,\"transaction_id\":2083}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/checkouts/create?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"checkouts",
+						"create"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refundable Amount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb875cad-dd7f-4e07-8ef2-77a6187a5555",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('Search Criteria v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/order-product/refundable-amount/undefined?access-token={{access-token}}&language=en",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"order-product",
+						"refundable-amount",
+						"undefined"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Item",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3350b8f5-9558-4682-9bde-8dcf43dc7dcf",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					},
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"reason\":\"Need to change Payment method/details\",\"payment_id\":2720}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/order-product/return-item?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"order-product",
+						"return-item"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Vat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2d41ac50-63e2-4b6d-87f2-beae58805f36",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"vat_registered\":1,\"country_id\":225,\"name\":\"test\",\"address\":\"test\",\"trn\":\"test\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/458552/register-vat?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"458552",
+						"register-vat"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Phone otp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a3481f3c-ee40-4c21-9ef9-e6a8eb8bd781",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"phone\":\"9355581579\",\"dial-code\":\"+91\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/change-phone-otp?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"change-phone-otp"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Paypal Payment verification",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb475121-9af0-4cd6-ba0e-25afaa25baa4",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					},
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"payment_method\":\"Paypal\",\"paypal_id\":\"gauravtmca@gmail.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}{{ip}}/{{versionA}}/api/web/{{versionB}}/users/794939/payment-detail?access-token={{access-token}}",
+					"host": [
+						"{{live}}{{ip}}"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"users",
+						"794939",
+						"payment-detail"
+					],
+					"query": [
+						{
+							"key": "access-token",
+							"value": "{{access-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "7137d877-0a14-4bfe-a0b8-96c01ee014f9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "41484c5f-ddde-4209-9c49-b4af1f69ab5a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
