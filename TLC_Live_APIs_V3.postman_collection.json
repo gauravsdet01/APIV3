@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "9e1695c8-6c33-4362-b124-5e7d3775477a",
-		"name": "TLC Live APIs V3",
+		"_postman_id": "df430990-4a2c-41c0-872a-5364baf4287a",
+		"name": "TLC Live APIs V3 Copy 2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"id": "be6dd197-b32c-48f1-8b0f-2b29c312d2cc",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -30,7 +30,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"id": "76cf1cd1-3ff0-4e91-88ef-cd87932ac6a7",
 						"exec": [
 							""
 						],
@@ -71,7 +71,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/login?",
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/users/login",
 					"host": [
 						"{{live}}theluxurycloset",
 						"com"
@@ -111,7 +111,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"id": "5c342b3e-7ac5-46f6-9916-62a7682fe626",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -124,7 +124,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"id": "3245b6cb-4b3d-4c40-8c43-5a7ce25fed35",
 						"exec": [
 							""
 						],
@@ -210,12 +210,12 @@
 			"response": []
 		},
 		{
-			"name": "Products MPP",
+			"name": "TLC Cash",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"id": "4320ac52-dca7-44b3-8f1f-20b673b920f0",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -228,7 +228,109 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"id": "9042e8c7-3670-4c91-a033-2f03af72971e",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"type": "text",
+						"value": "mobile_web"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "test_auth"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://papi.theluxurycloset.com/ios/api/web/v3/storecredit/usertlccash?product_id=302431&product_price=80",
+					"protocol": "https",
+					"host": [
+						"papi",
+						"theluxurycloset",
+						"com"
+					],
+					"path": [
+						"ios",
+						"api",
+						"web",
+						"v3",
+						"storecredit",
+						"usertlccash"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						},
+						{
+							"key": "product_id",
+							"value": "302431"
+						},
+						{
+							"key": "product_price",
+							"value": "80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products MPP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d2c73fe3-3fbf-411e-b603-fac78bf7183f",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a5f9769a-5dac-4d5d-8855-8bdd9cfff6ed",
 						"exec": [
 							""
 						],
@@ -326,7 +428,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"id": "bc8ccc1f-b5fb-49d9-ba15-2da9c2337274",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -340,7 +442,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"id": "d14f85e2-42b2-46bf-a98a-35a7098d821d",
 						"exec": [
 							""
 						],
@@ -431,7 +533,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "48ef0aa5-8a9d-452d-a040-24aca075154b",
+						"id": "2256ebf4-908e-4a09-861a-156e6f2433fb",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -445,7 +547,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "8b6cb649-e3bb-4aed-be93-8ecb36277e11",
+						"id": "6db5bec3-00f3-454d-9d51-a1422cab6c71",
 						"exec": [
 							""
 						],
@@ -511,7 +613,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a812fbb2-9ef1-4d7e-8c1d-490023183600",
+						"id": "a0879210-3a63-49b7-8ac7-c683e87ea88e",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -563,7 +665,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "551b2916-9fb7-4e4d-a602-a5c249c47147",
+						"id": "be9ec429-4ef6-4bab-a02e-6eba152baef9",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -615,7 +717,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "711e38ab-86f6-4040-bb8c-4937636520b0",
+						"id": "3acd3216-cfc6-453e-8c9a-74d6f7f7625a",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -685,7 +787,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "829b3792-c0cd-4912-9fc0-1d92d0035760",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -737,7 +839,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"id": "6fbec2d6-bf91-4a6a-8e8e-7e508bcf112a",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -795,7 +897,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"id": "8cb4f205-a0fc-41b8-b2f5-27ca1895166a",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -873,7 +975,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d1391291-ed15-440e-bc32-519adbdc607d",
+						"id": "36341188-413f-4135-b37b-01e56e3dc318",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -925,7 +1027,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "3665ad96-3a95-411e-916c-9e515c47961d",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -983,7 +1085,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "6f12740b-6d3a-41a2-abe3-f8839e791014",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1039,7 +1141,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "68b27a1c-586a-47e8-9616-932106b436da",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1092,7 +1194,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "337665b5-a078-471d-970d-b7487cd6c553",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -1145,7 +1247,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "ec75a00c-e1d1-4c04-bd45-8e4eb215158e",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1215,7 +1317,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "31848c7a-ee94-45eb-9a2d-54d122f48064",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -1292,7 +1394,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d3e5faf6-ef3f-4c79-b828-9eedc93a39db",
+						"id": "531874cf-907b-4157-b0ff-dec345fd565a",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1353,7 +1455,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "2c2ba697-9c55-4623-8627-937d2ee4ffbf",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1401,7 +1503,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "9fdaa688-2549-4643-8a44-cdcc5e4f2d1c",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1449,7 +1551,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "c555ea68-9f9c-4cb3-a417-257b7feda2ac",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1495,7 +1597,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "58cdf7cc-57d8-4fb6-982f-8d98e1634faa",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1541,7 +1643,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "8d8e1eeb-cd1d-49e8-9add-80df452fc7ce",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1598,7 +1700,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "551b2916-9fb7-4e4d-a602-a5c249c47147",
+						"id": "3aa95a7f-ace6-4f3f-a586-a0cbec0289c4",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -1679,7 +1781,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "742afc7f-6227-4a92-98b3-35317793581b",
+						"id": "ca60cd7d-557b-4564-a324-edc5d7dc0515",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1694,7 +1796,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "160bf430-1c5d-44d9-9fea-6448c2349a5c",
+						"id": "4a0f9c88-20ec-4584-b4f6-1ac0334c67ee",
 						"exec": [
 							""
 						],
@@ -1775,7 +1877,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "e852fa1a-0b06-4060-8528-0d397e16ddd8",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -1847,7 +1949,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "df3dba80-fa17-44e5-8653-a036c4a7bb81",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -1919,7 +2021,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9fe1cb35-7f85-492a-91ea-e8a279b1bceb",
+						"id": "e5ca1291-7a80-416f-bbd4-0886d3cf3ca8",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -1969,7 +2071,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "4de6a4d0-b06b-48f3-bcbc-bff1ad2afd81",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -2041,7 +2143,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "ec784f96-e135-4b79-bf1b-6d55d8f190c9",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -2114,7 +2216,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "d96459a7-b114-4f62-9112-d682fa332f52",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -2186,7 +2288,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ea7f6028-1415-4fc0-ade1-6e66ba30a3c3",
+						"id": "3d612fbc-985c-466a-adba-4663c23175b1",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
@@ -2258,7 +2360,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "06d2bb9a-e55f-431e-b124-98ce9a7c4fd8",
+				"id": "e3b3b78a-063f-4cb3-b93c-9182339edb31",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -2268,7 +2370,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "99d9d036-7a45-484d-9164-35ba6cdd3c7c",
+				"id": "9c6e76a7-7eb2-4ad5-a622-59191fc02916",
 				"type": "text/javascript",
 				"exec": [
 					""
