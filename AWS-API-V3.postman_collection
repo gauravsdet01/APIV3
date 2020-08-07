@@ -14,7 +14,7 @@
 						"id": "5730dc79-d371-4557-aefe-8cc63bdbf80b",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
-							"    pm.response.to.have.status(400);\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
 							"var jsonData = JSON.parse(responseBody);\r",
