@@ -11,10 +11,14 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "be6dd197-b32c-48f1-8b0f-2b29c312d2cc",
+						"id": "f957afe9-0828-41e1-9f74-85deff2253bb",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"    \r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});\r",
 							"});\r",
 							"\r",
 							"var jsonData = JSON.parse(responseBody);\r",
@@ -30,7 +34,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "76cf1cd1-3ff0-4e91-88ef-cd87932ac6a7",
+						"id": "b084be25-5df9-4a82-8f65-c12f535072e6",
 						"exec": [
 							""
 						],
@@ -116,7 +120,9 @@
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -220,7 +226,10 @@
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -322,7 +331,10 @@
 							"pm.test(\"response is ok\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -434,7 +446,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							""
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -539,6 +553,9 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});\r",
 							"console.log('My Profile v2',pm.response.responseTime );"
 						],
 						"type": "text/javascript"
@@ -619,7 +636,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Wishlist v2',pm.response.responseTime );"
+							"console.log('Wishlist v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -671,7 +692,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('My Items v2',pm.response.responseTime );"
+							"console.log('My Items v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -723,7 +748,11 @@
 							"    pm.response.to.have.status(400);\r",
 							"});\r",
 							"\r",
-							"console.log('Cart v2',pm.response.responseTime );"
+							"console.log('Cart v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -793,7 +822,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('My Purchases v2',pm.response.responseTime );"
+							"console.log('My Purchases v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -845,7 +878,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('HamBurger v2',pm.response.responseTime );"
+							"console.log('HamBurger v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -903,7 +940,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Update Personal Info v2',pm.response.responseTime );"
+							"console.log('Update Personal Info v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -981,7 +1022,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('SPP v2',pm.response.responseTime );"
+							"console.log('SPP v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1034,7 +1079,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Expected Time Range v2',pm.response.responseTime );"
+							"console.log('Expected Time Range v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1091,7 +1140,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Products v2',pm.response.responseTime );"
+							"console.log('Products v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1147,7 +1200,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Shipping Payment Info v2',pm.response.responseTime );"
+							"console.log('Shipping Payment Info v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1201,7 +1258,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Product Validation v2',pm.response.responseTime );"
+							"console.log('Product Validation v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1253,7 +1314,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Voucher v2',pm.response.responseTime );"
+							"console.log('Voucher v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1324,7 +1389,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1400,7 +1469,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Shipping v2',pm.response.responseTime );"
+							"console.log('Shipping v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1461,7 +1534,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Countries v2',pm.response.responseTime );"
+							"console.log('Countries v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1509,7 +1586,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Currencies v2',pm.response.responseTime );"
+							"console.log('Currencies v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1558,7 +1639,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Optout v2',pm.response.responseTime );"
+							"console.log('Optout v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1604,7 +1689,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Optin v2',pm.response.responseTime );"
+							"console.log('Optin v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1649,7 +1738,11 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Search Criteria v2',pm.response.responseTime );"
+							"console.log('Search Criteria v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1707,7 +1800,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Proposals Upload v2',pm.response.responseTime );"
+							"console.log('Proposals Upload v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1788,7 +1885,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Forgot Password v2',pm.response.responseTime );"
+							"console.log('Forgot Password v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1884,7 +1985,12 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -1956,7 +2062,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -2027,7 +2137,12 @@
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"console.log('Search Criteria v2',pm.response.responseTime );"
+							"console.log('Search Criteria v2',pm.response.responseTime );\r",
+							"\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -2078,7 +2193,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -2150,7 +2269,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -2223,7 +2346,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -2295,7 +2422,11 @@
 							"});\r",
 							"\r",
 							"\r",
-							"console.log('Valid Payment Method v2',pm.response.responseTime );"
+							"console.log('Valid Payment Method v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
