@@ -14,7 +14,7 @@
 						"id": "f957afe9-0828-41e1-9f74-85deff2253bb",
 						"exec": [
 							"pm.test(\"response is ok\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(400);\r",
 							"    \r",
 							"pm.test(\"Response time is less than 8000ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
