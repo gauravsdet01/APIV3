@@ -110,6 +110,116 @@
 			"response": []
 		},
 		{
+			"name": "Desktop Menu",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0d8af05d-4fa1-4d2d-9d4a-167163f123bb",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    \r",
+							"pm.test(\"Response time is less than 8000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a2e67d5a-d65a-4adf-bf82-fdafff822673",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Platform",
+						"value": "mobile_web",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "test_auth",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"automation@theluxurycloset.com\",\"password\":\"Welcome123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/menus?platform=D&type=top&language=en",
+					"host": [
+						"{{live}}theluxurycloset",
+						"com"
+					],
+					"path": [
+						"{{versionA}}",
+						"api",
+						"web",
+						"{{versionB}}",
+						"menus"
+					],
+					"query": [
+						{
+							"key": "platform",
+							"value": "D"
+						},
+						{
+							"key": "type",
+							"value": "top"
+						},
+						{
+							"key": "language",
+							"value": "en"
+						},
+						{
+							"key": "username",
+							"value": "gaurav.t@theluxurycloset.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Welcome@123",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Products SPP",
 			"event": [
 				{
