@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "6eb9d4ce-4af6-47f2-94a6-ff98723d0c62",
+		"name": "CDN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CDNImage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9a7403a-a10f-453e-b6c2-d44c0dc5c2b9",
+						"exec": [
+							"pm.test(\"response is ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"console.log('SPP v2',pm.response.responseTime );\r",
+							"\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(8000);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cdn.theluxurycloset.com/uploads/products/full/luxury-women-michael-michael-kors-used-handbags-p249223-002.jpg",
+					"protocol": "https",
+					"host": [
+						"cdn",
+						"theluxurycloset",
+						"com"
+					],
+					"path": [
+						"uploads",
+						"products",
+						"full",
+						"luxury-women-michael-michael-kors-used-handbags-p249223-002.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
