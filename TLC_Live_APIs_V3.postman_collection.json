@@ -822,7 +822,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/new-my-items?access-token={{access-token}}",
+					"raw": "{{live}}theluxurycloset.com/{{versionA}}/api/web/{{versionB}}/my-accounts/{{userid}}/new-my-items?count=true&access-token={{access-token}}",
 					"host": [
 						"{{live}}theluxurycloset",
 						"com"
