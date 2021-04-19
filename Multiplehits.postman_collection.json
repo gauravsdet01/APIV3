@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "4ff6b873-0def-4b32-8beb-9775fd59a9e0",
+		"name": "Multiplehits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TLC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 14",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 25",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 26",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 27",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 24",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 23",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 22",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 19",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 16",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 13",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 36",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 35",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 34",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 32",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 33",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 31",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 30",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 29",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 28",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		},
+		{
+			"name": "TLC Copy 8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://theluxurycloset.com/"
+			},
+			"response": []
+		}
+	]
+}
